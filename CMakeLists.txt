@@ -1,4 +1,5 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 3.24) # 建议最低版本设为 3.24 以更好支持 CMP0135
+cmake_policy(SET CMP0135 NEW)
 project(SimpleCIDemo)
 
 set(CMAKE_CXX_STANDARD 11)
@@ -12,7 +13,7 @@ FetchContent_MakeAvailable(googletest)
 
 enable_testing()
 
-add_executavle(runTests
+add_executable(runTests
 calculator.cpp
 test_calculator.cpp
 )
