@@ -18,5 +18,6 @@ test_calculator.cpp
 )
 
 target_link_libraries(runTests gtest_main)
+
 include(GoogleTest)
 gtest_discover_tests(runTests)
